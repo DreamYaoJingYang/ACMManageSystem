@@ -12,7 +12,7 @@ CREATE TABLE members(
 	id_card VARCHAR(18) COMMENT'身份证号',
 	phone_number VARCHAR(11) COMMENT'手机号',
 	email VARCHAR(20) COMMENT'邮箱号',
-	photo_name VARCHAR(10) COMMENT'照片全名',
+	photo_name VARCHAR(30) COMMENT'照片全名',
 	join_date DATE COMMENT'加入acm日期',
 	is_exit INT COMMENT'中途是否退出',
 	account VARCHAR(20) COMMENT'账号',
@@ -35,7 +35,6 @@ CREATE TABLE game(
 	medal VARCHAR(5) COMMENT'奖牌级别',
 	game_date DATE COMMENT'比赛日期'
 );
-
 
 
 

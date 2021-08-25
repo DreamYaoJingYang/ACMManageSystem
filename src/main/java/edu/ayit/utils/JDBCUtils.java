@@ -1,4 +1,4 @@
-package edu.ayit.Utils;
+package edu.ayit.utils;
 
 
 import java.io.IOException;
@@ -52,6 +52,23 @@ public class JDBCUtils {
 
         return connection;
     }
+
+    /**
+    *@Description: 关闭数据库链接
+    *@Author: Jingyang Yao
+    *@date: 2021/8/25
+    */
+    public static void closeConnection(Connection connection){
+        try {
+            if(connection!=null){
+                connection.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
 
 }
