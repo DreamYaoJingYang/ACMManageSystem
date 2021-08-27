@@ -16,8 +16,8 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AdministratorsBean {
-    int acm_id;//acm成员id
+    int acmId;//acm成员id
     String post;//岗位
-    Date entry_date;//入职日期
-    Date dimission_date;//离职日期
+    Date entryDate;//入职日期
+    Date dimissionDate;//离职日期
 }

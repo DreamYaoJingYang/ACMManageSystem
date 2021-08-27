@@ -16,9 +16,9 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GameBean {
-    int acm_id;//acm成员id
+    int acmId;//acm成员id
     String name;//比赛名称
     String grade;//地域级别(赛区)
     String meda;//奖牌级别
-    Date game_date;//比赛日期
+    Date gameDate;//比赛日期
 }
