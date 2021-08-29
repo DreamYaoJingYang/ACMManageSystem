@@ -31,8 +31,9 @@ public class MembersBean {
     String photoName;//照片全名
     Date joinDate;//加入acm日期
     int isExit;//中途是否退出实验室
-    String account;//账号
+    String account;//账号 默认为邮箱号
     String password;//密码
+
 
     public MembersBean(String nickname, String name, String studentNumber, String department, String major, int grade, int className, String idCard, String phoneNumber, String email, String photoName, Date joinDate, int isExit, String account, String password) {
         this.nickname = nickname;

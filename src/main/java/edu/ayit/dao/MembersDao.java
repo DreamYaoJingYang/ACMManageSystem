@@ -16,8 +16,8 @@ import java.sql.SQLException;
 public class MembersDao {
 
     /**
-    *@Description: 添加成员,返回添加是否成功信息
-    *@Author: Jingyang Yao
+    *@description: 添加成员,返回添加是否成功信息
+    *@author: Jingyang Yao
     *@date: 2021/8/25
     */
     private static Connection connection = JDBCUtils.getConnection();
@@ -75,8 +75,8 @@ public class MembersDao {
     }
 
     /**
-    *@Description: 通过acm查询成员
-    *@Author: Jingyang Yao
+    *@description: 通过acm查询成员
+    *@author: Jingyang Yao
     *@date: 2021/8/25
     */
     public MembersBean queryMemberByAcmId(int acmId){
