@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.util.Date" %><%--
   Created by IntelliJ IDEA.
   User: Karen
   Date: 2021/8/26
@@ -26,26 +26,26 @@
 
     <div class="addMemberForm">
         <%--成员信息表单--%>
-        <form class="layui-form" action="" lay-filter="example">
+        <form class="layui-form" onsubmit="return judgeForm(this)" action="/ACMManageSystem/toAddMember" lay-filter="example" method="post">
 
             <div class="layui-form-item">
                 <label class="layui-form-label">昵称</label>
                 <div class="layui-input-block">
-                    <input type="text" name="nickname" lay-verify="title" autocomplete="off" placeholder="昵称（两个字以内）" class="layui-input">
+                    <input type="text" name="nickname"  autocomplete="off" placeholder="昵称（两个字以内）" class="layui-input">
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label class="layui-form-label">姓名</label>
                 <div class="layui-input-block">
-                    <input type="text" name="username" lay-verify="title" autocomplete="off" placeholder="姓名" class="layui-input">
+                    <input type="text" name="name"  autocomplete="off" placeholder="姓名" class="layui-input">
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label class="layui-form-label">学号</label>
                 <div class="layui-input-block">
-                    <input type="text" name="studentNumber" lay-verify="title" autocomplete="off" placeholder="学号" class="layui-input">
+                    <input type="text" name="studentNumber"  autocomplete="off" placeholder="学号" class="layui-input">
                 </div>
             </div>
 
@@ -59,103 +59,77 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">专业</label>
                 <div class="layui-input-block">
-                    <input type="text" name="major" lay-verify="title" autocomplete="off" placeholder="专业" class="layui-input">
+                    <input type="text" name="major"  autocomplete="off" placeholder="专业" class="layui-input">
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label class="layui-form-label">年级</label>
                 <div class="layui-input-block">
-                    <input type="text" name="grade" lay-verify="title" autocomplete="off" placeholder="年级" class="layui-input">
+                    <input type="text"  name="grade"  autocomplete="off" placeholder="年级" class="layui-input">
                 </div>
             </div>
+
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">班级</label>
+                <div class="layui-input-block">
+                    <input type="text" name="className"  autocomplete="off" placeholder="班级" class="layui-input">
+                </div>
+            </div>
+
             <div class="layui-form-item">
                 <label class="layui-form-label">身份证号</label>
                 <div class="layui-input-block">
-                    <input type="text" name="idCard" lay-verify="title" autocomplete="off" placeholder="身份证号" class="layui-input">
+                    <input type="text" name="idCard"  autocomplete="off" placeholder="身份证号" class="layui-input">
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label class="layui-form-label">手机号</label>
                 <div class="layui-input-block">
-                    <input type="text" name="phoneNumber" lay-verify="title" autocomplete="off" placeholder="手机号" class="layui-input">
+                    <input type="text" name="phoneNumber" autocomplete="off" placeholder="手机号" class="layui-input">
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label class="layui-form-label">邮箱</label>
                 <div class="layui-input-block">
-                    <input type="text" name="email" lay-verify="title" autocomplete="off" placeholder="邮箱" class="layui-input">
+                    <input type="text" name="email"  autocomplete="off" placeholder="邮箱" class="layui-input">
                 </div>
             </div>
 
-
-
+            <div class="layui-form-item">
+                <label class="layui-form-label">登录账号</label>
+                <div class="layui-input-block">
+                    <input type="text" name="account" placeholder="账号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
 
             <div class="layui-form-item">
                 <label class="layui-form-label">登录密码</label>
                 <div class="layui-input-block">
-                    <input type="password" name="password" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                    <input type="password" name="password" placeholder="密码" autocomplete="off" class="layui-input">
                 </div>
             </div>
 
             <div class="layui-form-item">
-                <label class="layui-form-label">选择框</label>
+                <label class="layui-form-label">加入ACM</label>
                 <div class="layui-input-block">
-                    <select name="interest" lay-filter="aihao">
-                        <option value=""></option>
-                        <option value="0">写作</option>
-                        <option value="1">阅读</option>
-                        <option value="2">游戏</option>
-                        <option value="3">音乐</option>
-                        <option value="4">旅行</option>
-                    </select>
+                    <input type="date" name="joinDate"  autocomplete="off" >
                 </div>
             </div>
 
-            <div class="layui-form-item">
-                <label class="layui-form-label">复选框</label>
-                <div class="layui-input-block">
-                    <input type="checkbox" name="like[write]" title="写作">
-                    <input type="checkbox" name="like[read]" title="阅读">
-                    <input type="checkbox" name="like[daze]" title="发呆">
-                </div>
-            </div>
+            <%--默认值--%>
+            <input type="text" name="photoName" value="photoName" hidden="hidden">
 
-            <div class="layui-form-item">
-                <label class="layui-form-label">开关</label>
-                <div class="layui-input-block">
-                    <input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF">
-                </div>
-            </div>
-
-            <div class="layui-form-item">
-                <label class="layui-form-label">单选框</label>
-                <div class="layui-input-block">
-                    <input type="radio" name="sex" value="男" title="男" checked="">
-                    <input type="radio" name="sex" value="女" title="女">
-                </div>
-            </div>
-            <div class="layui-form-item layui-form-text">
-                <label class="layui-form-label">文本域</label>
-                <div class="layui-input-block">
-                    <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
-                </div>
-            </div>
-
-            <div class="layui-form-item">
-                <div class="layui-input-block">
-                    <button type="button" class="layui-btn layui-btn-normal" id="LAY-component-form-setval">赋值</button>
-                    <button type="button" class="layui-btn layui-btn-normal" id="LAY-component-form-getval">取值</button>
-                    <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
-                </div>
+            <input  type="text" name="isExit" value="0" hidden="hidden">
+            <div>
+                <button type="submit" class="layui-btn">addMember</button>
             </div>
         </form>
-
     </div>
-
-
-
 </body>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/addMember.js" type="text/javascript"></script>
 </html>

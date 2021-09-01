@@ -4,6 +4,7 @@ import edu.ayit.dao.MembersDao;
 import edu.ayit.pojo.MembersBean;
 import org.junit.Test;
 
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -16,14 +17,14 @@ import java.util.Date;
  */
 public class MembersDaoTest {
 
-    MembersDao membersDao = new MembersDao();
+    private MembersDao membersDao = new MembersDao();
     /**
-    *@Description: 测试 addMember 方法
-    *@Author: Jingyang Yao
+    *@description: 测试 addMember 方法
+    *@author: Jingyang Yao
     *@date: 2021/8/25
     */
     @Test
-    public void addMemberTest(){
+    public void addMemberTest() throws SQLException {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date joinDate = null;
         try {

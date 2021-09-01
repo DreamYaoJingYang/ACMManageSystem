@@ -12,6 +12,4 @@
         <servlet-name>IndexToAddMemberServlet</servlet-name>
         <url-pattern>/toAddMember</url-pattern>
     </servlet-mapping>
-    
-    
 </web-app>

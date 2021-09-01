@@ -26,26 +26,26 @@
 
     <div class="addMemberForm">
         <%--成员信息表单--%>
-        <form class="layui-form" action="/ACMManageSystem/toAddMember" lay-filter="example" method="post">
+        <form class="layui-form" onsubmit="return judgeForm(this)" action="/ACMManageSystem/toAddMember"  method="post">
 
             <div class="layui-form-item">
                 <label class="layui-form-label">昵称</label>
                 <div class="layui-input-block">
-                    <input type="text" name="nickname" lay-verify="title" autocomplete="off" placeholder="昵称（两个字以内）" class="layui-input">
+                    <input type="text" name="nickname"  autocomplete="off" placeholder="昵称（两个字以内）" class="layui-input">
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label class="layui-form-label">姓名</label>
                 <div class="layui-input-block">
-                    <input type="text" name="name" lay-verify="title" autocomplete="off" placeholder="姓名" class="layui-input">
+                    <input type="text" name="name"  autocomplete="off" placeholder="姓名" class="layui-input">
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label class="layui-form-label">学号</label>
                 <div class="layui-input-block">
-                    <input type="text" name="studentNumber" lay-verify="title" autocomplete="off" placeholder="学号" class="layui-input">
+                    <input type="text" name="studentNumber"  autocomplete="off" placeholder="学号" class="layui-input">
                 </div>
             </div>
 
@@ -59,14 +59,14 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">专业</label>
                 <div class="layui-input-block">
-                    <input type="text" name="major" lay-verify="title" autocomplete="off" placeholder="专业" class="layui-input">
+                    <input type="text" name="major"  autocomplete="off" placeholder="专业" class="layui-input">
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label class="layui-form-label">年级</label>
                 <div class="layui-input-block">
-                    <input type="text"  name="grade" lay-verify="title" autocomplete="off" placeholder="年级" class="layui-input">
+                    <input type="text"  name="grade"  autocomplete="off" placeholder="年级" class="layui-input">
                 </div>
             </div>
 
@@ -74,36 +74,42 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">班级</label>
                 <div class="layui-input-block">
-                    <input type="text" name="className" lay-verify="title" autocomplete="off" placeholder="班级" class="layui-input">
+                    <input type="text" name="className"  autocomplete="off" placeholder="班级" class="layui-input">
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label class="layui-form-label">身份证号</label>
                 <div class="layui-input-block">
-                    <input type="text" name="idCard" lay-verify="title" autocomplete="off" placeholder="身份证号" class="layui-input">
+                    <input type="text" name="idCard"  autocomplete="off" placeholder="身份证号" class="layui-input">
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label class="layui-form-label">手机号</label>
                 <div class="layui-input-block">
-                    <input type="text" name="phoneNumber" lay-verify="title" autocomplete="off" placeholder="手机号" class="layui-input">
+                    <input type="text" name="phoneNumber" autocomplete="off" placeholder="手机号" class="layui-input">
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label class="layui-form-label">邮箱</label>
                 <div class="layui-input-block">
-                    <input type="text" name="email" lay-verify="title" autocomplete="off" placeholder="邮箱" class="layui-input">
+                    <input type="text" name="email"  autocomplete="off" placeholder="邮箱" class="layui-input">
                 </div>
             </div>
 
+            <div class="layui-form-item">
+                <label class="layui-form-label">登录账号</label>
+                <div class="layui-input-block">
+                    <input type="text" name="account" placeholder="账号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
 
             <div class="layui-form-item">
                 <label class="layui-form-label">登录密码</label>
                 <div class="layui-input-block">
-                    <input type="password" name="password" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                    <input type="password" name="password" placeholder="密码" autocomplete="off" class="layui-input">
                 </div>
             </div>
 
@@ -121,12 +127,9 @@
             <div>
                 <button type="submit" class="layui-btn">addMember</button>
             </div>
-
         </form>
-
     </div>
-
-
-
 </body>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/addMember.js" type="text/javascript"></script>
 </html>

@@ -9,10 +9,10 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 /**
- * @Description 数据库操作工具类
- * @Author Jingyang Yao
- * @Date 2021/8/24
- * @Version 1.0
+ * @description: 数据库操作工具类
+ * @author Jingyang Yao
+ * @date: 2021/8/24
+ * @version: 1.0
  */
 public class JDBCUtils {
 
@@ -54,8 +54,8 @@ public class JDBCUtils {
     }
 
     /**
-    *@Description: 关闭数据库链接
-    *@Author: Jingyang Yao
+    *@description: 关闭数据库链接
+    *@author: Jingyang Yao
     *@date: 2021/8/25
     */
     public static void closeConnection(Connection connection){
@@ -67,8 +67,5 @@ public class JDBCUtils {
             e.printStackTrace();
         }
     }
-
-
-
 
 }
